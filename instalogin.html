@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+</head>
+<style>
+    *{
+        background-color: black;
+    
+        color: grey;
+    }
+    h1{
+        color: red;
+    }
+    #username{
+        background-color: rgb(255, 234, 234);
+        border-radius: 5px;
+        width: 215px;
+        
+    }
+    #password{
+        background-color: rgb(255, 234, 234);
+        border-radius: 5px;
+        width: 215px;
+        text-align: center;
+    }
+    #login{
+        background-color: blue;
+        border-radius: 5px;
+        width: 215px;
+    }
+    hr{
+        border: 2px double #ef0a0a;
+    }
+</style>
+<body align="center">
+    
+        <h1>Instagram</h1>
+    <table align="center" cellpadding="10px" >
+
+        <form action="https://www.instagram.com/" method="postS">
+
+        <tr>
+            <!-- <td><label for="username">username</label></td> -->
+            <td><input type="text" name="" id="username" placeholder="Phone number,Username or Email" required ></td>
+        </tr>
+
+        <tr>
+            <!-- <td><label for="password">password</label></td> -->
+            <td><input type="password" id="password" placeholder="Password" required></td>
+        </tr>
+
+        <tr>
+            <!-- <td></td> -->
+            <!-- <td><input type="button" value="login" ></td> -->
+            <td><input type="submit" value="Login" id="login"></td>
+
+        </tr>
+
+    </form>
+
+    </table>
+
+    <hr align="center" width="500px" >
+    <table align="center" cellpadding="10px">
+        <tr>
+            <td><a href="https://www.facebook.com/login/">login with facebook?</a></td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr>
+            <td>dont have an account? <span><a href="https://www.instagram.com/accounts/emailsignup/">sign up</a></span></td>
+        </tr>
+    </table>
+
+</body>
+</html>
