@@ -125,17 +125,17 @@
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Know More
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Know More
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="card text-center" style="width: 18rem;">
@@ -144,17 +144,17 @@
                 <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Know More
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Know More
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,6 +214,127 @@
             </div>
         </div>
     </section>
+
+
+    <div>
+        <p class="text-info">1) What are the default Bootstrap text settings?</p>
+        <li>The default font family for Bootstrap text is the system font stack. This means that the text will inherit
+            the default font of the user's operating system, such as Arial, Helvetica, sans-serif, etc.</li>
+        <li>The default font size for Bootstrap text is set using the font-size-base variable, which is 1rem (16
+            pixels). However, the size can vary depending on the HTML element's context and Bootstrap's use of relative
+            units (rem).</li>
+        <li>Bootstrap text uses the body-color variable, which typically translates to the color #212529. This color is
+            usually a shade of black or dark gray.</li>
+    </div>
+
+    <div>
+        <p class="text-info mt-4">2) What do you know about the Bootstrap Grid System?</p>
+
+        <li>The Bootstrap Grid System is a fundamental part of the Bootstrap front-end framework. It provides a flexible
+            and responsive layout system to create consistent designs across various screen sizes and devices. The grid
+            system is based on a 12-column layout and allows developers to divide the webpage into rows and columns,
+            enabling the creation of complex, multi-column layouts with ease.</li>
+
+        Here are the key features and concepts of the Bootstrap Grid System:
+
+        <li>12-Column Layout: The grid system is divided into 12 equal-width columns. Each row in the layout can contain
+            up to 12 columns, and the columns will automatically adjust their width based on the screen size.
+        </li>
+        <li>
+            Responsive Design: Bootstrap's grid system is mobile-first, which means it's designed to work on mobile
+            devices by default and then scales up to larger screens. As the screen size increases or decreases, the
+            layout will adapt accordingly.
+        </li>
+
+        <li>
+            Grid Classes: Bootstrap provides a set of CSS classes that you can use to define the layout of your webpage.
+            For example, col-xs-*, col-sm-*, col-md-*, and col-lg-* are used to specify how many columns anelement
+            should occupy based on the screen size. The * here is a placeholder for the number of columns theelement
+            should span (1 to 12).
+        </li>
+
+
+        <li>
+            Offset and Push/Pull: Bootstrap also provides classes to add offsets to columns and to reorder columns
+            visually using push-* and pull-* classes. This feature is useful for fine-tuning the layout and adjusting
+            the order of elements on different screen sizes.
+        </li>
+
+        <li>
+            Containers: The grid system works within container elements (container and container-fluid). A container
+            provides padding and sets a maximum width for the content inside it. The difference between container and
+            container-fluid lies in how they handle padding and width.
+        </li>
+    </div>
+
+    <div>
+        <p class="text-info mt-4">3)What is the difference between Bootstrap 4 and Bootstrap 5</p>
+        <li>
+            jQuery Dependency: One significant change in Bootstrap 5 is the removal of the jQuery dependency. In
+            Bootstrap 4, jQuery was a requirement for some interactive components and features. However, in Bootstrap 5,
+            the developers moved away from jQuery and made the framework more lightweight and modern.
+        </li>
+        <li>
+            Bootstrap 5 introduced the use of CSS custom properties (also known as CSS variables) to handle various
+            styles. This provides more flexibility and makes it easier to customize the framework's look and feel by
+            directly modifying the CSS variables.
+        </li>
+
+        <li>
+            The grid system in Bootstrap 5 remains similar to Bootstrap 4, but some utility classes were added to
+            provide more control over column spacing. For example, you can now use classes like gap and g-* to add
+            column and row gaps directly in the HTML, instead of manually adding margins.
+        </li>
+    </div>
+
+    <div>
+        <p class="text-info mt-4">4)What is a Button Group, and what is the class for a basic Button Group?</p>
+        <li>
+            A Button Group is a component in Bootstrap that allows you to group multiple buttons together in a single
+            line or container. It is commonly used to represent related actions or options as a cohesive unit, improving
+            the visual appearance and user experience.
+        </li>
+        <li>
+            In a Button Group, the buttons are styled to appear as a single unit, with spacing and borders between them.
+            When using a button group, you can also apply toggle behaviors, making it possible to create radio button or
+            checkbox-like functionality using buttons.
+        </li>
+
+        <li>
+            The class used for a basic Button Group in Bootstrap is btn-group. To create a button group, you typically
+            wrap a set of < button> elements (or other elements with the .btn class) with a < div> or < span> element
+                        with the class btn-group
+        </li>
+    </div>
+
+    <div>
+        <p class="text-info mt-4">5)In Bootstrap 4, what is flexbox?</p>
+        <li>
+            Parent Container (Flex Container): To use Flexbox, you define a flex container (parent) and apply the display: flex; or display: inline-flex; property to it. This makes all the direct children of the container flex items.
+        </li>
+        <li>
+            Main Axis and Cross Axis: In a flex container, you have a main axis and a cross axis. The main axis is the primary axis along which the flex items are laid out, and the cross axis is perpendicular to it. The main axis direction can be either horizontal (row) or vertical (column) based on the flex-direction property.
+        </li>
+        <li>
+            Flex Items: The children elements of a flex container become flex items. You can use various flex properties to control their behavior, such as flex-grow, flex-shrink, and flex-basis.
+        </li>
+        <li>
+            Flex Direction: The flex-direction property determines the direction of the main axis. It can be set to row (horizontal), column (vertical), row-reverse, or column-reverse.
+        </li>
+        <li>
+            Justify Content: The justify-content property is used to control the alignment of flex items along the main axis. It allows you to distribute space and position the items accordingly.
+        </li>
+        <li>
+            Align Items and Align Self: The align-items property aligns flex items along the cross axis of the container, and the align-self property allows you to override the alignment of individual flex items.
+        </li>
+        <li>
+            Flex Wrap: The flex-wrap property enables wrapping of flex items to new lines when there isn't enough space on the main axis.
+        </li>
+    </div>
+
+    <div class="alert alert-primary m-4" role="alert">
+        How to make alert using bootstrap !
+      </div>
 
 
 
