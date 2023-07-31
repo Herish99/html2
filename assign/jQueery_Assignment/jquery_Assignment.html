@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Assignment</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h4>What is jQuery?</h4>
+    <p>jQuery is a popular and widely-used JavaScript library that simplifies DOM manipulation, event handling,
+        animation, and AJAX (asynchronous JavaScript and XML) interactions. It was created by John Resig in 2006 and
+        quickly gained popularity due to its ease of use and cross-browser compatibility.</p>
+    <p>jQuery provides a more concise and efficient way to interact with HTML elements, handle events, and make
+        asynchronous requests compared to using raw JavaScript. It abstracts away many of the complexities and browser
+        inconsistencies, allowing developers to write cleaner and more readable code.</p>
+    <p>
+        <li>DOM Manipulation: jQuery provides a set of methods to easily select and manipulate HTML elements. For
+            example, you can use $(selector) to select elements and then apply various methods like addClass,
+            removeClass, html, text, val, etc., to change their content, attributes, or styles.</li>
+        <li>Event Handling: jQuery simplifies the process of attaching event listeners to elements. You can use methods
+            like on, click, hover, keypress, etc., to handle various events.</li>
+        <li>Animation Effects: jQuery includes built-in animation methods that allow you to create smooth animations,
+            such as fading elements in and out, sliding elements, and animating CSS properties.</li>
+    </p>
+
+    <h4>How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+        Jquery, JQuery Animation?</h4>
+    <p>$("#myParagraph").css({"backgroundColor":"black","color":"white");</p>
+    <pre>function init() {
+        $("h1").css("backgroundColor", "yellow");
+        $("#myParagraph").css({ "backgroundColor": "black", "color": "white" });
+        $(".bordered").css("border", "1px solid black");
+        }</pre>
+
+    <h5>Add and Removal of css class</h5>
+    <pre>
+        $('.menu li').on('click', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    </pre>
+
+    <h5>Animation with jQuery</h5>
+    <pre>
+         < div id="clickme">
+            Click here
+        </>
+        < img id="book" src="book.png" alt="" width="100" height="123" style="position: relative; left: 10px;">
+
+        $("#clickme").on("click", function () {
+            $("#book").animate({
+                opacity: 0.25,
+                left: "+=50",
+                height: "toggle"
+            }, 2000, function () {
+                // Animation complete.
+            });
+        }); 
+    </pre>
+
+    <!-- <p>
+    <div id="clickme">
+        Click here
+    </div>
+    <img id="book" src="book.png" alt="" width="100" height="123" style="position: relative; left: 10px;"></p> -->
+
+      
+
+</body>
+
+</html>

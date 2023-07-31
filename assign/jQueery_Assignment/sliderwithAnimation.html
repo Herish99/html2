@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <style>
+        .slider {
+  overflow: hidden;
+  width: 500px;
+  height: 300px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides .box {
+  width: 500px;
+  height: 300px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.box1{
+    background-color: rgb(255, 238, 0);
+}
+.box2{
+    background-color: rgb(255, 34, 0);
+}
+.box3{
+    background-color: rgb(0, 229, 255);
+}
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="box box1">Box1</div>
+            <div class="box box2">Box2</div>
+            <div class="box box3">Box3</div>
+            <!-- <img src="image1.jpg" alt="Slide 1">
+            <img src="image2.jpg" alt="Slide 2">
+            <img src="image3.jpg" alt="Slide 3"> -->
+        </div>
+      </div>
+      <button class="prev-btn">Previous</button>
+      <button class="next-btn">Next</button>
+      
+
+      <script>
+        $(document).ready(function() {
+          // Variables to keep track of current slide and slide width
+          let currentSlide = 0;
+          const slideWidth = $(".slider").width();
+      
+          // Next slide function
+          function nextSlide() {
+            currentSlide = (currentSlide + 1) % $(".slides .box").length;
+            $(".slides").animate({ "margin-right": -currentSlide * slideWidth }, 500);
+          }
+      
+          // Previous slide function
+          function prevSlide() {
+            currentSlide = (currentSlide - 1 + $(".slides .box").length) % $(".slides .box").length;
+            $(".slides").animate({ "margin-right": -currentSlide * slideWidth }, 500);
+          }
+      
+          // Attach click event handlers to buttons
+          $(".next-btn").click(nextSlide);
+          $(".prev-btn").click(prevSlide);
+        });
+      </script>
+</body>
+</html>
