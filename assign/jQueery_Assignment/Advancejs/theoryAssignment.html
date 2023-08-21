@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>What will be the result for these expressions?
+        <h5>1) Result of 5 > 4 </h5>
+        <p>true</p>
+
+        <h5>2) "apple" > "pineapple"</h5>
+        <p>false because Since 'a' comes before 'p' in the Unicode table, "apple" is considered less than "pineapple."
+            Therefore, the expression "apple" > "pineapple" evaluates to false in JavaScript.
+        </p>
+
+        <h5>3) "2" > "12"</h5>
+        <p>true because Since '2' comes after '1' in the Unicode table, "2" is considered greater than "12." Therefore,
+            the expression "2" > "12" evaluates to true in JavaScript.</p>
+
+        <h5>4) undefined == null</h5>
+        <p>true Reason... In JavaScript, undefined is a primitive data type that represents the absence of a value, and
+            null is also a primitive data type that represents the intentional absence of a value. They are often used
+            interchangeably in certain contexts, but they are not exactly the same.</p>
+    </h4>
+
+    <h5>5) undefined === null</h5>
+    <p>false they both are different data type (primitive data type)</p>
+
+    <h5>6) null == "\n0\n"</h5>
+    <ul>
+        <li>null is a special primitive value representing the intentional absence of any object value.
+        </li>
+        <li>"\n0\n" is a string that contains newline characters at the beginning and end, with "0" in between.
+        </li>
+    </ul>
+    <p>False, Since null is not a string, the type coercion attempts to convert "\n0\n" to a number or null to make the
+        comparison valid. The result of converting "\n0\n" to a number is 0, but null is not equal to 0. Hence, the
+        comparison evaluates to false.</p>
+
+
+    <h4>what will be output of alert(null||2||undefined)</h4>
+    <pre>alert(null||2||undefined) //output is 2</pre>
+
+
+    <h4>Write a program showing alert</h4>
+    <p><Button onclick="showalert()">Press To Alert</Button></p>
+
+    <h4>Write a program confirming age </h4>
+    <p><Button onclick="Age()">Age </Button></p>
+        <script>
+            // alert(null||2||undefined) //output is 2
+
+            function showalert(){
+                alert('alert is triggered')
+            }
+
+            function Age(){
+                let age = prompt('enter age');
+                if (age>18) {
+                    return confirm('You are eligible')
+                }
+                else{
+                    return confirm('Did your parent allowed you?')
+                }
+            }
+            Age()
+        </script>
+</body>
+
+</html>
