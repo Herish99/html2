@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        Explain Life Cycle in Class Component
+    </h2>
+    <p>
+
+        In React, class components used to have a set of lifecycle methods that allowed developers to run code at
+        specific points in the component's lifecycle. These methods provided opportunities to perform tasks like
+        initializing state, making API requests, updating the UI, and cleaning up resources. However, with the
+        introduction of React Hooks in React 16.8, the use of class components and lifecycle methods has become less
+        common, as functional components with hooks provide a more concise and readable way to manage component logic.
+    </p>
+
+    <ul>
+        <li>
+            <h3>Mounting Phase:</h3>
+
+            <pre>
+            constructor(): This method is called when an instance of the component is being created. It's used for
+            setting up the initial state and for binding event handlers.
+            static getDerivedStateFromProps(): This static method is called whenever the component is about to receive
+            new props. It allows you to update the state based on the incoming props.
+            render(): This method is responsible for rendering the component's JSX. It should be a pure function that
+            doesn't have side effects.
+            </pre>
+        </li>
+        <li>
+            <h3>Updating Phase:</h3>
+
+            <pre>
+            componentDidMount(): This method is invoked immediately after the component is inserted into the DOM. It's
+            often used for making AJAX requests or setting up subscriptions.
+            shouldComponentUpdate(): This method determines whether the component should re-render after receiving new
+            props or state. It's useful for optimizing performance.
+            componentDidUpdate(): This method is called after the component's update is flushed to the DOM. It's used
+            for performing actions after a component has updated, such as making additional AJAX requests based on new
+            props.
+           </pre>
+        </li>
+        <li>
+            <h3>Unmounting Phase:</h3>
+            <pre>
+            componentWillUnmount(): This method is invoked right before a component is removed from the DOM. It's used
+            for cleanup tasks like canceling network requests or cleaning up event listeners.
+            </pre>
+        </li>
+    </ul>
+
+    <h2>Explain Life Cycle in functional Component</h2>
+    <p>
+        Functional components in React don't have traditional lifecycle methods like class components. Instead, they can
+        achieve similar functionality using React Hooks. React introduced hooks in React 16.8 to allow functional
+        components to manage state and side effects. Here's an overview of some important hooks and how they relate to
+        the lifecycle of functional components:
+    </p>
+    <ul>
+        <li>
+            <h3>useState Hook:</h3>
+
+            This hook allows functional components to manage local state.
+            It replaces the need for a constructor and this.state in class components.
+            <pre>
+                It is written as :
+                const [state, useState] = useState(initialstate/default);
+            </pre>
+        </li>
+        <li>
+            <h3>useEffect Hook:</h3>
+
+            useEffect is used for handling side effects and mimics the behavior of componentDidMount,
+            componentDidUpdate, and componentWillUnmount in class components.
+            It can be used to perform actions after the component has rendered, manage subscriptions, and more.
+            <pre>
+                written as
+                <h4>its called Component did mount</h4>
+                useEffect(() => {
+                    // Effect code here
+                   
+                  }, []);
+                  if empty dependency, then component will render as default one time like constructor.
+                  <h4>its called Component did update</h4>
+                  useEffect(() => {
+                    // Effect code here
+                    
+                  }, [dependency]);
+                  if dependency is written, then it will render every time the component update or changes.
+                  <h4>its called Component will unmount</h4>
+                  useEffect(() => {
+                    // Effect code here
+                    return () => {
+                      // Cleanup code here (componentWillUnmount)
+                    };
+                  }, []);
+                  if return is provided , then it will clean up code after getting unmount.
+            </pre>
+        </li>
+    </ul>
+</body>
+
+</html>
